@@ -120,6 +120,7 @@ INSERT INTO Reservation VALUES ('12/11/2021' , '12/11/2021' , 'en-ligne' , 28 , 
 INSERT INTO Reservation VALUES ('25/12/2021' , '25/12/2021', 'en-ligne' , 29, 2,29 );
 INSERT INTO Reservation VALUES ('26/12/2021' , '26/12/2021' , 'en-ligne' , 30 , 3,30 );
  
+/* 
  ---------------MYsql---------------------------------------------------------------
 
 INSERT INTO  Reservation VALUES ('2021-04-01' ,'2021-04-01' , 'en-ligne' , 1 , 1, 1 );
@@ -129,7 +130,6 @@ INSERT INTO Reservation VALUES ('2021-06-12' ,'2021-06-13' , 'sur-place' , 4 , 2
 INSERT INTO Reservation VALUES ('2021-06-06' ,'2021-06-07' , 'en-ligne' , 5 ,3 , 5 );
 INSERT INTO Reservation VALUES ('2021-07-14' ,'2021-07-14' , 'sur-place' , 6 ,1, 6);
 
----celle qu'a fait younes--
 
 INSERT INTO Reservation VALUES ('20-dec-21','en-ligne',1,1,1);
 INSERT INTO Reservation VALUES ('21-dec-21','sur-place',2,1,2);
@@ -137,7 +137,7 @@ INSERT INTO Reservation VALUES ('20-dec-21','en-ligne',3,2,3);
 INSERT INTO Reservation VALUES ('20/dec/21','sur-place',4,1,3);
 INSERT INTO Reservation VALUES ('24/dec/21','sur-place',5,1,4);
 
-
+*/
 
 
 
@@ -239,11 +239,7 @@ insert into film values (17,'Eiffel',109,NULL,'drame',13-10-2021);
 insert into film values (18,'Les Eternels',157,NULL,'Science Fiction',03-11-2021);
 insert into film values (19,'Zone hostile',114,-18,'Science-fiction, action et guerre',15-01-2021);
 insert into film values (20,'Spider-Man: No Way Home',148,NULL,'super-héros',15-12-2021);
-/*insert into film values (1, 'MOURIR PEUT ATTENDRE',163,null,'action-thriller-espionnage','06-oct-21');
-insert into film values (2, 'Infinite',106,null,'scienc fiction-thriller-espionnage','04-oct-2021');
-insert into film values (3, 'Le dernier duel',152,12,'drame historique','13-oct-2021');
-insert into film values (4,'The Addams Family 2',93,null,'fantastique-comedie','13-oct-2021');
-insert into film values (5, 'Eiffel',108,null,'historique','13-oct-2021');*/
+
 
 --insertion projection--
 insert into projection values(1,1,1,1,'23-dec-21','vostfr');
@@ -335,6 +331,7 @@ on cinema.ID_cinema = salle.ID_cinema
 group by cinema.ID_cinema
 );
 select * from v_capaciteSalle;
+
 --donne l autorisation de supprimer , modifier et de consulter la capacite des salles
 GRANT select , update , delete
 on TABLE v_capaciteSalle
